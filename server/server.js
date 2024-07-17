@@ -6,6 +6,7 @@ const cors = require("cors");
 /* const mongoose = require(mongoose); */
 
 const workoutRoutes = require("./routes/workout");
+const userRoutes = require("./routes/user");
 const { default: mongoose } = require("mongoose");
 /*  Invoke express to create an express server */
 
@@ -22,6 +23,7 @@ app.use((req, res, next) => {
 
 /* Routes */
 app.use("/api/workouts", workoutRoutes);
+app.use("/api/user", userRoutes);
 
 // Connect to Database
 
